@@ -1,8 +1,5 @@
 $(document).ready(function(){
-/* var game_start is borrowed from duckhunt exercise*/
 
-var game_start = new Audio('/audio/start-round.mp3');
-  game_start.play();
 
 var counter = 200;
 
