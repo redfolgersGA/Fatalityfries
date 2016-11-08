@@ -2,6 +2,7 @@
     width: 100%;
     text-align: center;
     font-size: 200px;
+    color: red;
 
 
    }
@@ -10,31 +11,21 @@
 
   background-image: url("http://i.imgur.com/xVOkdzL.gif");
   background-repeat:  no-repeat;
-  /* padding: 1000px 10px 28px 80px; */
   background-position: 9px -1px;
-    height: 144px;
-    width: 90px;
-    left: 0px;
-    position: absolute;
+  height: 144px;
+  width: 90px;
+  left: 0px;
+  position: absolute;
 }
-  /*animation: walk 1.0s steps(1) infinite;
 
-
-  background-position:  -190px 0px;
-
+body {
+  background-image: url("http://i.imgur.com/1gUzzCo.png");
+  background-size: 100%;
 }
-@keyframes walk {
-  from { background-position:  0px; }
-  to { background-position: 1000px; } */
 
 
 
-   /* $('.scorpion1').click(function() {
-      console.log("handler for .keypress called.")
-   }); */
-
-
-   /* setTimeout clearTimeout */
+/* setTimeout clearTimeout */
 /*an even trigger (keypress will cause the background position numbers to increase and decrease based on a function of some sort*/
 
 

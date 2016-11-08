@@ -1,19 +1,9 @@
 $(document).ready(function(){
+/* var game_start is borrowed from duckhunt exercise*/
 
-// var $body = $('.scorpion');
+var game_start = new Audio('/audio/start-round.mp3');
+  game_start.play();
 
-
-//   $('.scorpion').on('click', function() {
-//     $(this).animate({
-//       width: "70%",
-//       opacity: 1,
-//       marginLeft: "15.0in",
-//       fontsize: "3em",
-//       borderWidth: "10px"
-//     }, 2000);
-//  $('#clicks').text("count " + event.target.scorpion);
-//   });
-// $(function())
 var counter = 200;
 
 $('.scorpion').on('click', function() {
@@ -21,7 +11,7 @@ $('.scorpion').on('click', function() {
   $(this).css("left", counter+"px");
   counter +=200;
   if( counter === 1600) {
-  alert('You Win');
+  alert('You Win! Refresh browser to try again');
 };
   console.log(counter);
 });
@@ -44,7 +34,7 @@ var ourCountdown = setInterval(function() {
    clearInterval(ourCountdown);
 
    $('#num').html('FATALITY');
-      alert('You Lose');
+      alert('You Lose! Refresh browser to try again');
 
   }
 
@@ -61,6 +51,20 @@ var ourCountdown = setInterval(function() {
 //while timer is running, move charcter, collect clicks
 //when timer ends, alert player game ended and # of clicks
 //set up for replay option after game ends
+// var $body = $('.scorpion');
+
+
+//   $('.scorpion').on('click', function() {
+//     $(this).animate({
+//       width: "70%",
+//       opacity: 1,
+//       marginLeft: "15.0in",
+//       fontsize: "3em",
+//       borderWidth: "10px"
+//     }, 2000);
+//  $('#clicks').text("count " + event.target.scorpion);
+//   });
+// $(function())
 
 
 
