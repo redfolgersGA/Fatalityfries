@@ -43,7 +43,7 @@ var ourCountdown = setInterval(function() {
 
    clearInterval(ourCountdown);
 
-   $('#num').html('GAME OVER');
+   $('#num').html('FATALITY');
       alert('You Lose');
 
   }
@@ -52,6 +52,16 @@ var ourCountdown = setInterval(function() {
 
   // console.log(parseInt($('#num').html()))
  });
+
+// psuedocode
+//function that movesCharacter
+//function/variable to register clicks or whatever
+//timer function that ends the game and alerts user
+
+//while timer is running, move charcter, collect clicks
+//when timer ends, alert player game ended and # of clicks
+//set up for replay option after game ends
+
 
 
 
