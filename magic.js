@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  console.log("ready to roll")
 // TO DO FOR GAME:
 // Make game end when you lose. i.e refresh the browser after alert
 // make game end when you win i.e refresh the browser
@@ -9,84 +10,64 @@ var counter = 200;
 
 var $scorpion = $('.scorpion')
 
-// function moveScorpion(e){
-//   $(this).animate(pageX += counter)
 
-// }
 
+
+function startGame(){
+  console.log("startgame")
+  $scorpion.on('click', function(e){
+    $scorpion.fadeOut("fast").fadeIn("fast")
+    $(this).animate({left: counter});
+counter +=200;
+clickNumber ++
+console.log(clickNumber)
+console.log(counter)
+$scorpion.fadeOut("fast").fadeIn("fast")
+  })
+}
 
 startGame()
-function startGame(){
-  $scorpion.on('click', function(e) {
-  $scorpion.fadeOut("fast").fadeIn("fast")
 
-
-  $(this).animate({left: counter});
-
-  counter +=200;
-  clickNumber ++
-  console.log(clickNumber)
-  $scorpion.fadeOut("fast").fadeIn("fast")
 
 });
 
-  function alertGameWin(){
-    if( counter === 1600) {
-  alert('You Win! Refresh browser to try again. Your number of clicks was' +
-    clickNumber);
-};
-  console.log(counter);
+//   function alertGameWin(){
+//     if( counter === 1600) {
+//   alert('You Win! Refresh browser to try again. Your number of clicks was' +
+//     clickNumber);
+// }
+//   console.log(counter);
+// };
 
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $scorpion.on('click', function(e){
-//   console.log(e.target)
-//   console.log(e.pageX)
-
-// })
-
+// });
 
 
 
 
 /*the clock is breaking the animation for some reason
 the clock and animation are both working now GREAT!*/
-var ourCountdown = setInterval(function() {
+// var ourCountdown = setInterval(function() {
 
 
-  var timer = parseInt($('#num').html());
+//   var timer = parseInt($('#num').html());
 
-  if (timer !== 0) {
+//   if (timer !== 0) {
 
-    $('#num').html(timer - 1);
-  } else {
+//     $('#num').html(timer - 1);
+//   } else {
 
-   clearInterval(ourCountdown);
+//    clearInterval(ourCountdown);
 
-   $('#num').html('FATALITY');
-      alert('You Lose! Refresh browser to try again. Your number of clicks was' +
-        clickNumber);
+//    $('#num').html('FATALITY');
+//       alert('You Lose! Refresh browser to try again. Your number of clicks was' +
+//         clickNumber);
 
-  }
+//   }
 
-}, 100);
+// }, 100);
 
-  // console.log(parseInt($('#num').html()))
- };
+
+// });
 
 // psuedocode
 //function that movesCharacter
