@@ -1,17 +1,63 @@
 $(document).ready(function(){
-
-
+// TO DO FOR GAME:
+// Make game end when you lose. i.e refresh the browser after alert
+// make game end when you win i.e refresh the browser
+// make a div with a click logger. high score is determnined by
+// number of clickNumber times counter (position of screen)
+var clickNumber = 0;
 var counter = 200;
 
-$('.scorpion').on('click', function() {
+var $scorpion = $('.scorpion')
 
-  $(this).css("left", counter+"px");
+// function moveScorpion(e){
+//   $(this).animate(pageX += counter)
+
+// }
+
+
+startGame()
+function startGame(){
+  $scorpion.on('click', function(e) {
+  $scorpion.fadeOut("fast").fadeIn("fast")
+
+
+  $(this).animate({left: counter});
+
   counter +=200;
-  if( counter === 1600) {
-  alert('You Win! Refresh browser to try again');
+  clickNumber ++
+  console.log(clickNumber)
+  $scorpion.fadeOut("fast").fadeIn("fast")
+
+});
+
+  function alertGameWin(){
+    if( counter === 1600) {
+  alert('You Win! Refresh browser to try again. Your number of clicks was' +
+    clickNumber);
 };
   console.log(counter);
-});
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $scorpion.on('click', function(e){
+//   console.log(e.target)
+//   console.log(e.pageX)
+
+// })
 
 
 
@@ -21,24 +67,26 @@ $('.scorpion').on('click', function() {
 the clock and animation are both working now GREAT!*/
 var ourCountdown = setInterval(function() {
 
+
   var timer = parseInt($('#num').html());
 
   if (timer !== 0) {
 
-    $('#num').html(timer -1);
+    $('#num').html(timer - 1);
   } else {
 
    clearInterval(ourCountdown);
 
    $('#num').html('FATALITY');
-      alert('You Lose! Refresh browser to try again');
+      alert('You Lose! Refresh browser to try again. Your number of clicks was' +
+        clickNumber);
 
   }
 
-}, 55);
+}, 100);
 
   // console.log(parseInt($('#num').html()))
- });
+ };
 
 // psuedocode
 //function that movesCharacter
