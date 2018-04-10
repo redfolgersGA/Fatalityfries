@@ -20,26 +20,46 @@ function startGame(){
     $(this).animate({left: counter});
 counter +=200;
 clickNumber ++
+      if(counter ===1600){
+        alert('You win! Refresh browser to try again! Your number of clicks was' +
+          clickNumber);
+      }
 console.log(clickNumber)
 console.log(counter)
 $scorpion.fadeOut("fast").fadeIn("fast")
   })
+
 }
 
 startGame()
 
 
-});
-
-//   function alertGameWin(){
+// function alertGameWin(){
 //     if( counter === 1600) {
 //   alert('You Win! Refresh browser to try again. Your number of clicks was' +
 //     clickNumber);
 // }
 //   console.log(counter);
 // };
+// alertGameWin()
 
-// });
+
+
+
+
+
+
+
+
+
+
+
+// END
+});
+
+
+
+
 
 
 
