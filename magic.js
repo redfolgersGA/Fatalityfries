@@ -33,15 +33,44 @@ $scorpion.fadeOut("fast").fadeIn("fast")
 
 startGame()
 
+var ourCountdown = setInterval(function(){
+  console.log("working")
 
-// function alertGameWin(){
-//     if( counter === 1600) {
-//   alert('You Win! Refresh browser to try again. Your number of clicks was' +
-//     clickNumber);
-// }
-//   console.log(counter);
-// };
-// alertGameWin()
+
+
+}, 1000)
+
+// var timer = parseInt($('#num').html());
+//   if(timer !== 0) {
+//     $('#num').html(timer - 1);
+//   } else {
+//     clearInterval(ourCountdown);
+
+//   }
+
+//  var timer = parseInt($('#num').html());
+
+//   if (timer !== 0) {
+
+//     $('#num').html(timer - 1);
+//   } else {
+
+//    clearInterval(ourCountdown);
+
+//    $('#num').html('FATALITY');
+//       alert('You Lose! Refresh browser to try again. Your number of clicks was' +
+//         clickNumber);
+
+//   }
+
+// }, 100);
+
+
+
+
+
+
+
 
 
 
@@ -69,25 +98,6 @@ the clock and animation are both working now GREAT!*/
 // var ourCountdown = setInterval(function() {
 
 
-//   var timer = parseInt($('#num').html());
-
-//   if (timer !== 0) {
-
-//     $('#num').html(timer - 1);
-//   } else {
-
-//    clearInterval(ourCountdown);
-
-//    $('#num').html('FATALITY');
-//       alert('You Lose! Refresh browser to try again. Your number of clicks was' +
-//         clickNumber);
-
-//   }
-
-// }, 100);
-
-
-// });
 
 // psuedocode
 //function that movesCharacter
